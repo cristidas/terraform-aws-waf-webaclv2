@@ -45,6 +45,12 @@ variable "ip_rate_based_rule" {
   default     = null
 }
 
+variable "byte_match_rules" {
+  description = "List of WAF byte match rules to detect web requests coming that match particular strings."
+  type        = any
+  default     = []
+}
+
 variable "geo_match_rules" {
   description = "List of WAF geo match rules to detect web requests coming from a particular set of contry codes."
   type        = any
